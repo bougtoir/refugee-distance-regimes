@@ -1,0 +1,4 @@
+data/raw/mdl/
+__pycache__/
+*.pyc
+results/*.npy

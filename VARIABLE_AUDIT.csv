@@ -1,0 +1,34 @@
+construct,dataset_id,wave,unit,exact_variable_or_question_label,coding_expected,missingness,access_restriction,downloadable,license
+origin_oblast,UNHCR_MDL_839,May-Dec 2022,household,"Which oblast were you living in Ukraine prior the start of the conflict?",categorical oblast list,unassessed (requires licensed microdata),licensed MDL,yes,UNHCR MDL terms
+origin_oblast,UNHCR_MDL_959,Feb-Jun 2023,household,"9.1. Oblast of origin (and Region of origin)",categorical,unassessed,licensed MDL,yes,same
+origin_oblast,UNHCR_MDL_1282,Jul-Oct 2024,household,"8. In which Oblast were you living in Ukraine before you departed?",categorical,unassessed,licensed MDL,yes,same
+origin_oblast_settlement,UNHCR_MDL_934,Jun 2023,household,"In which Oblast and settlement of Ukraine were you personally living on the 23rd of February of 2022?",oblast + free-text settlement,unassessed,licensed MDL,yes,same
+destination_country,UNHCR_MDL_839,May-Dec 2022,household,"Country of data collection",ISO country,complete by design,licensed MDL,yes,same
+destination_country,UNHCR_MDL_959,Feb-Jun 2023,household,"Country of interview (+ Place of interview)",country + site,complete by design,licensed MDL,yes,same
+destination_country,UNHCR_MDL_1282,Jul-Oct 2024,household,"Country of interview (+ Region of interview)",country + subnational region,complete by design,licensed MDL,yes,same
+onward_destination,UNHCR_MDL_1282,Jul-Oct 2024,household,"3.5. What is the country of your departure? / 3.4. What country is your final destination?",ISO country,subset (onward movers only),licensed MDL,yes,same
+education,all_UKR_datasets,2022-2024,household respondent,"What is the highest level of formal education you have attained?",categorical ISCED-like ladder,unassessed,licensed MDL,yes,same
+prewar_occupation,UNHCR_MDL_839,May-Dec 2022,household respondent,"Can you tell me what was your profession or main activity in Ukraine?",categorical + free text,unassessed,licensed MDL,yes,same
+prewar_occupation,UNHCR_MDL_959,Feb-Jun 2023,household respondent,"10. What was your main activity prior to leaving Ukraine?",categorical activity status,unassessed,licensed MDL,yes,same
+prewar_occupation,UNHCR_MDL_1282,Jul-Oct 2024,household respondent,"9. What was your main activity or occupation prior to leaving Ukraine?",categorical,unassessed,licensed MDL,yes,same
+prewar_home_ownership,UNHCR_MDL_934,Jun 2023,household,"In Ukraine were you living in a dwelling (house apartment) owned by you or any member of your household? + status of the dwelling",binary + categorical status,unassessed,licensed MDL,yes,same
+displacement_date,UNHCR_MDL_959,Feb-Jun 2023,household,"3. When did you leave Ukraine? / 3.1. When did you arrive to this country?",month-year,unassessed,licensed MDL,yes,same
+displacement_date,UNHCR_MDL_1282,Jul-Oct 2024,household,"3. When did you leave Ukraine for the first time? / 3.1. When did you arrive to this country?",month-year + derived arrival quarter,unassessed,licensed MDL,yes,same
+transit_countries,UNHCR_MDL_839,May-Dec 2022,household,"Which countries have you travelled in since leaving Ukraine? First Country of Arrival; 2nd-5th country of transit",up to 5 ISO countries,unassessed,licensed MDL,yes,same
+prior_internal_displacement,UNHCR_MDL_839,May-Dec 2022,household,"Were you internally displaced within Ukraine before moving abroad?",binary,unassessed,licensed MDL,yes,same
+relatives_abroad,UNHCR_MDL_839,May-Dec 2022,household,"Do you have relatives residing outside Ukraine? + First/Second/Third country relatives",binary + up to 3 countries,unassessed,licensed MDL,yes,same
+household_composition,all_UKR_datasets,2022-2024,household,"How many persons ... are there in your household currently? + children proportions (+ indv roster in Intentions series)",counts + proportions,unassessed,licensed MDL,yes,same
+family_separation,UNHCR_MDL_839,May-Dec 2022,household,"Have you been separated from any of your immediate family members? + reasons (did not want to leave / unable to move / conscription / passed / other)",binary + reason multicat,unassessed,licensed MDL,yes,same
+return_intention,all_UKR_datasets,2022-2024,household,"Do you plan to go back to Ukraine in the next 3 months? / Do you hope to return permanently? + reasons battery",ordinal intentions + reason items,unassessed,licensed MDL,yes,same
+destination_reason,UNHCR_MDL_959,Feb-Jun 2023,household,"17. What motivated you to come to this country?",multiselect (family/safety/work/services/cost...),unassessed,licensed MDL,yes,same
+current_income_posttreatment,UNHCR_MDL_1282,Jul-Oct 2024,household,"22.4. What are the sources of your household income in the last 30 days? / 22.4.1 income size last month",categorical sources + size band,unassessed,licensed MDL,yes,same (EXCLUDED from primary SES - post-treatment)
+documents_docs,UNHCR_MDL_959,Feb-Jun 2023,household,"14/15. members without identity documents; documents missing or expired",binary + type list,unassessed,licensed MDL,yes,same
+temporary_protection,UNHCR_MDL_959,Feb-Jun 2023,household,"16. Have you applied for temporary protection in this country? + difficulties + decision",binary + status,unassessed,licensed MDL,yes,same
+origin_syria_place,UNHCR_MDL_1342,2025,household,"22. Where did you use to live in Syria?",governorate/settlement expected,unassessed,licensed MDL,yes,same
+arrival_year_syria,UNHCR_MDL_1342,2025,household,"6. In which year did you arrive to ${current_c}?",year,unassessed,licensed MDL,yes,same
+origin_governorate_syria,UNHCR_MDL_403_406,2015-2016,individual,"A28: When did [NAME] leave Syria / source governorate (IDPs)? + GOVERNATE field",governorate + date,unassessed,licensed MDL,yes,same
+prewar_assets_syria,UNHCR_MDL_403_406,2015-2016,household,"D6X1-D6X7: Did you own any [ASSET] in September 2010? + D7 state when left + D8 proof of ownership + D9 current state",~7 asset classes x 4 items,unassessed,licensed MDL,yes,same
+prewar_employment_syria,UNHCR_MDL_403_406,2015-2016,individual,"A31: At the time of leaving Syria / source governorate was [NAME] employed or ...",employment status at leaving,unassessed,licensed MDL,yes,same
+education_syria,UNHCR_MDL_403_406,2015-2016,individual,"A19/A20: highest level attended/completed in formal system",categorical,unassessed,licensed MDL,yes,same
+origin_province_afg,UNHCR_MDL_1103,2023,household,"22. Place of residence in CoPR (Province) + 22.1 CoPR Province Name + Place of Birth (province)",province,unassessed,licensed MDL,yes,same
+education_afg,UNHCR_MDL_1103,2023,household,"16. What is your education level?",categorical,unassessed,licensed MDL,yes,same

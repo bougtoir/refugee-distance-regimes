@@ -1,0 +1,39 @@
+DAG source — refugee SES x distance study (rendered by analysis/make_dag.py into DAG.png)
+
+NODES (label, role)
+SES     pre-war SES (education / pre-war occupation or activity / home ownership)   [baseline]
+CONF    conflict intensity & occupation status at origin oblast                     [baseline/exogenous]
+BORD    border proximity & transport access from origin                             [baseline/exogenous]
+HH      household composition, age, sex                                             [baseline]
+DIAS    relatives residing abroad before flight (pre-existing diaspora network)     [baseline]
+FLEE    crossed an international border (sample conditioned on Flee=1)              [SELECTION NODE / COLLIDER]
+REGIME  latent migration-regime membership (pi_i)                                   [latent]
+HOST    host-country pull factors & availability (temporary-protection regime,
+        diaspora size, labour-market access, welfare, geographic position)          [destination level]
+DIST    observed migration distance (host country; km; border steps; transit count) [outcome]
+ROUTE   events and variables generated en route                                     [post-treatment]
+CURSES  current income / employment in host country                                 [post-treatment]
+
+EDGES
+SES -> REGIME        (SES changes probability of regime membership; Pattern C/D)
+SES -> DIST          (within-regime SES effect; Pattern E, and net A vs B)
+SES -> FLEE          (capacity to cross at all; drives stage-1 selection)
+SES -> CURSES        (pre-war SES predicts host-country income; NOT a confounder)
+CONF -> FLEE         (conflict intensity pushes exit)
+CONF -> DIST         (heavier conflict -> farther/permanent flight)
+BORD -> FLEE         (proximity enables crossing)
+BORD -> DIST         (access shapes feasible destinations)
+HH -> FLEE ; HH -> DIST ; HH -> REGIME
+DIAS -> REGIME ; DIAS -> DIST ; DIAS -> HOST
+REGIME -> DIST       (regime-specific distance distributions)
+HOST -> DIST         (destination availability != choice)
+DIST -> ROUTE ; FLEE -> ROUTE
+ROUTE -> CURSES ; DIST -> CURSES
+
+KEY BIASES MARKED
+- Conditioning on Flee=1 opens collider paths SES -> FLEE <- CONF/BORD -> DIST:
+  the observed sample is P(distance | crossed), not P(distance | exposed).
+- HOST is a destination-level exposure entered as availability set, never as an
+  individual baseline confounder.
+- ROUTE and CURSES are consequences of the outcome/path and are excluded from
+  every adjustment set (descriptive use only).
